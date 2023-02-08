@@ -1,0 +1,45 @@
+// DONT REMOVE THIS LINE! SwarpTemplateHash=8dfaaf SwarpVersion=1.81.0 SwarpCreateDate=2022-01-21T19:15:29.131Z
+//  gRPC Service
+//
+// Copyright © 2022 zhanjingjie
+//
+syntax = "proto3";
+
+package zhanjingjie.buftesting.buftesting.v1;
+
+import "zhanjingjie/buftesting/buftesting/v1/buftesting.proto";
+//uncommentimport "zhanjingjie/protobuf/options.proto";
+
+
+option csharp_namespace = "zhanjingjie.Buftesting.Buftesting.v1";
+option go_package = "buftesting/buftestingv1";
+option java_multiple_files = true;
+option java_outer_classname = "BuftestingApiProto";
+option java_package = "com.zhanjingjie.buftesting.buftesting.v1";
+
+// This line is only useful for publishing to service-contracts. So it will be uncommented dynamically
+// during the CI stage right before publishing to service-contracts.
+//uncommentoption (zhanjingjie.protobuf.service_contracts).publish = true;
+
+// BuftestingAPI service contains a GettingStarted method.
+service BuftestingAPI {
+  // GettingStarted is here to help you get started. It is recommended to
+  // leave this here while you bootstrap your service.
+  rpc GettingStarted(GettingStartedRequest) returns (GettingStartedResponse) {}
+}
+
+// GettingStartedRequest is the request for GettingStarted. All gRPC
+// methods must take a message ending in "Request".
+//
+// Echo is defined in zhanjingjie/buftesting/buftesting/v1/golang_service_template.proto by the import statement at the top.
+message GettingStartedRequest {
+  Echo echo = 1;
+}
+
+// GettingStartedResponse is the response for GettingStarted. All
+// gRPC methods must return a message ending in "Response".
+//
+// Echo is defined in zhanjingjie/buftesting/buftesting/v1/golang_service_template.proto by the import statement at the top.
+message GettingStartedResponse {
+  Echo echoed = 1;
+}
