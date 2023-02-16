@@ -1,13 +1,9 @@
-// DONT REMOVE THIS LINE! SwarpTemplateHash=0e0531 SwarpVersion=1.81.0 SwarpCreateDate=2022-01-21T19:15:29.131Z
-//  gRPC Messages
-//
-// Copyright © 2022 zhanjingjie
-//
 syntax = "proto3";
 
 package zhanjingjie.buftesting.buftesting.v1;
 
 import "google/protobuf/timestamp.proto";
+import "zhanjingjie/shared/utils/v1/enums.proto";
 
 option csharp_namespace = "zhanjingjie.Buftesting.Buftesting.v1";
 option go_package = "buftesting/buftestingv1";
@@ -15,20 +11,10 @@ option java_multiple_files = true;
 option java_outer_classname = "BuftestingProto";
 option java_package = "com.zhanjingjie.buftesting.buftesting.v1";
 
-// If you need to import other proto files that might include shared message
-// definitions, you can do so like this:
-//
-// import "zhanjingjie/buftesting/buftesting/v1/messages.proto";
-
-// Echo is a message container. These are the logical messages that are part of
-// your service's communications with other services. The Request and Response
-// messages above are just used as transport containers for these actual
-// business or application messages.
-//
 // This message is part of a bootstrap example for buftestingAPI in
 // zhanjingjie/buftesting/buftesting/v1/golang_service_template_api.proto.
 message Echo {
-  // hello is a string you want to greet the endless chasm of opportunity with.
   string hello = 1;
   google.protobuf.Timestamp today_time = 2;
+  zhanjingjie.shared.utils.v1.Month.Enum month = 3;
 }

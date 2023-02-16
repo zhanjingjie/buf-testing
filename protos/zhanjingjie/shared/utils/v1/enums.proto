@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package zhanjingjie.shared.utils.v1;
+
+option csharp_namespace = "zhanjingjie.Shared.Utils.V1";
+option go_package = "shared/utilsv1";
+option java_multiple_files = true;
+option java_outer_classname = "EnumsProto";
+option java_package = "com.zhanjingjie.shared.utils.v1";
+
+message Month {
+  enum Enum {
+    ENUM_UNSPECIFIED = 0;
+    ENUM_JANUARY = 1;
+    ENUM_FEBRUARY = 2;
+  }
+}
